@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            
+            <h2>Calculator</h2>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="ActiveLink">Simple Interest</a></li>
+            <li><a href="bmi.html">Body Mass Index</a></li>
+            <li><a href="calorie.html">Calorie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Simple Interest Calculator</h1>
+
+            <form id="SimpleInterest" oninput="SimpleInterest()">
+                <label for="Principal">Principal Amount (₹)</label>
+                <input type="number" name="principal" id="Principal" placeholder="Enter Principal Amount" min="0" step="any">
+
+                <label for="RateOfInterest">Rate Of Interest (%)</label>
+                <input type="number" name="Rate Of Interest" id="RateOfInterest" placeholder="Enter Rate Of Interest"min="0" step="any">
+
+                <label for="Time">Time (in Years)</label>
+                <input type="number" name="time" id="Time" placeholder="Enter Time" min="0" step="any">
+            </form>
+
+            <div class="result">
+                <div style="margin-bottom: 10px;">Principal Amount: ₹<span id="PrincipalAmount" class="value">0.00</span></div>
+                <div style="margin-bottom: 10px;">Interest Amount: ₹<span id="InterestAmount" class="value">0.00</span></div>
+                <div>Total Amount: ₹<span id="TotalAmount" class="value">0.00</span></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

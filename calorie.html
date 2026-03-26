@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+        
+
+            <h2>Calculator</h2>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Simple Interest</a></li>
+            <li><a href="bmi.html">Body Mass Index</a></li>
+            <li><a href="calorie.html" class="ActiveLink">Calorie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Calorie Calculator</h1>
+
+            <form oninput="Calorie()">
+                <label for="Age">Age</label>
+                <input type="number" name="Age" id="Age" placeholder="Enter Age" min="0" step="any">
+
+                <label for="Weight">Weight (kg)</label>
+                <input type="number" name="Weight" id="Weight" placeholder="Enter Weight" min="0" step="any">
+
+                <label for="Height">Height (cm)</label>
+                <input type="number" name="Height" id="Height" placeholder="Enter Height" min="0" step="any">
+
+                <label for="Gender">Gender</label>
+                <select id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label for="ActivityLevel">Activity Level</label>
+                <select id="ActivityLevel">
+                    <option value="Sedentary">Sedentary (Little or No Exercise)</option>
+                    <option value="LightlyActive">Lightly Active (Light Exercise/Sports 1-3 Days/Week)</option>
+                    <option value="ModeratelyActive">Moderately Active (Moderate Exercise/Sports 3-5 Days/Week)</option>
+                    <option value="VeryActive">Very Active (Hard Exercise/Sports 6-7 Days a Week)</option>
+                    <option value="ExtraActive">Extra Active (Very Hard Exercise & Physical Job or 2x Training)</option>
+                </select>
+            </form>
+
+            <div class="result">
+                <div style="margin-bottom: 10px;">Basal Metabolic Rate (BMR): <span id="BMR" class="value">0.00</span></div>
+                <div style="margin-bottom: 10px;">Daily Calorie: <span id="DailyCalorie" class="value">0.00</span></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
